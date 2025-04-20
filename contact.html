@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact - Dr. Kalam Tribute</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loader"><h2>Loading...</h2></div>
+  <header>
+    <h1>Leave a Message</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="quotes.html">Quotes</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="contact.html">Message</a>
+    </nav>
+  </header>
+  <main>
+    <form>
+      <label>Name</label><br>
+      <input type="text" name="name" required><br><br>
+      <label>Message</label><br>
+      <textarea name="message" rows="5" required></textarea><br><br>
+      <button type="submit">Send</button>
+    </form>
+  </main>
+  <script>
+    window.addEventListener("load", () => {
+      document.getElementById("loader").style.display = "none";
+    });
+  </script>
+</body>
+</html>

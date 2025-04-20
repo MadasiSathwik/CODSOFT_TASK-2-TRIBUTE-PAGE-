@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timeline - Dr. A.P.J. Abdul Kalam</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loader"><h2>Loading...</h2></div>
+  <header>
+    <h1>Life Timeline</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="quotes.html">Quotes</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="contact.html">Message</a>
+      <button id="darkToggle">🌓</button>
+    </nav>
+  </header>
+  <main>
+    <section class="timeline">
+      <div class="timeline-item">Born: October 15, 1931</div>
+      <div class="timeline-item">Joined DRDO: 1958</div>
+      <div class="timeline-item">Launched SLV-III: 1980</div>
+      <div class="timeline-item">Became President of India: 2002</div>
+      <div class="timeline-item">Passed away: July 27, 2015</div>
+    </section>
+  </main>
+  <script>
+    window.addEventListener("load", () => {
+      document.getElementById("loader").style.display = "none";
+      document.querySelectorAll('.timeline-item').forEach((item, i) => {
+        setTimeout(() => item.classList.add('show'), i * 300);
+      });
+    });
+    document.getElementById("darkToggle").addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+  </script>
+</body>
+</html>

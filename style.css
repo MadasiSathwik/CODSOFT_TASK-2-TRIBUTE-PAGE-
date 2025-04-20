@@ -1,0 +1,157 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #333;
+  }
+  
+  header {
+    background: linear-gradient(135deg, #3b0066, #9900cc);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 5px solid #6200ea;
+  }
+  
+  nav {
+    margin-top: 10px;
+  }
+  
+  nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  nav a:hover {
+    background-color: #ffffff;
+    color: #3b0066;
+  }
+  
+  #loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .gallery-img {
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.5s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  .gallery-img.show {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .audio-section {
+    margin: 2rem;
+    text-align: center;
+  }
+  
+  .timeline {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .timeline-item {
+    background: #f0f0f0;
+    padding: 1rem;
+    margin: 1rem;
+    border-left: 5px solid #6200ea;
+    width: 60%;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.5s ease;
+    animation: slideInLeft 0.6s forwards;
+  }
+  
+  .timeline-item:nth-child(even) {
+    transform: translateX(50px);
+  }
+  
+  @keyframes slideInLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .quotes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .quote-item {
+    opacity: 0;
+    transform: scale(0.8);
+    margin: 1rem;
+    background-color: #e0d4f7;
+    border-left: 5px solid #7b2cbf;
+    padding: 1rem;
+    border-radius: 10px;
+    max-width: 600px;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.2rem;
+    animation: fadeInScale 0.5s ease-out forwards;
+  }
+  
+  .quote-item:nth-child(1) { animation-delay: 0.2s; }
+  .quote-item:nth-child(2) { animation-delay: 0.6s; }
+  .quote-item:nth-child(3) { animation-delay: 1s; }
+  
+  @keyframes fadeInScale {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  .dark-mode header,
+  .dark-mode nav {
+    background: #1f1f1f;
+    color: #e0e0e0;
+  }
+  
+  .dark-mode nav a {
+    background: #333;
+    color: #e0e0e0;
+  }
+  
+  .dark-mode nav a:hover {
+    background-color: #00416a;
+    color: white;
+  }
+  

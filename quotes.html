@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quotes - Dr. A.P.J. Abdul Kalam</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loader"><h2>Loading...</h2></div>
+  <header>
+    <h1>Inspirational Quotes</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="quotes.html">Quotes</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="contact.html">Message</a>
+      <button id="darkToggle">🌓</button>
+    </nav>
+  </header>
+  <main>
+    <section class="quotes">
+      <div class="quote-item">"Dream, dream, dream. Dreams transform into thoughts and thoughts result in action."</div>
+      <div class="quote-item">"You have to dream before your dreams can come true."</div>
+      <div class="quote-item">"Excellence is a continuous process and not an accident."</div>
+    </section>
+  </main>
+  <script>
+    window.addEventListener("load", () => {
+      document.getElementById("loader").style.display = "none";
+      document.querySelectorAll('.quote-item').forEach((item, i) => {
+        setTimeout(() => item.classList.add('show'), i * 300);
+      });
+    });
+    document.getElementById("darkToggle").addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+  </script>
+</body>
+</html>

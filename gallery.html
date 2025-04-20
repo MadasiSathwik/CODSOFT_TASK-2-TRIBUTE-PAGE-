@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Dr. A.P.J. Abdul Kalam</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loader"><h2>Loading...</h2></div>
+  <header>
+    <h1>Gallery</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="quotes.html">Quotes</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="contact.html">Message</a>
+      <button id="darkToggle">🌓</button>
+    </nav>
+  </header>
+  <main class="gallery">
+    <img class="gallery-img" src="kalam_1.jpg" alt="Image 1">
+    <img class="gallery-img" src="kalam_2.jpg" alt="Image 2">
+    <img class="gallery-img" src="kalam_3.jpg" alt="Image 3">
+    <!-- Add more images as needed -->
+  </main>
+  <script>
+    window.addEventListener("load", () => {
+      document.getElementById("loader").style.display = "none";
+      document.querySelectorAll('.gallery-img').forEach((item, i) => {
+        setTimeout(() => item.classList.add('show'), i * 300);
+      });
+    });
+    document.getElementById("darkToggle").addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+  </script>
+</body>
+</html>
